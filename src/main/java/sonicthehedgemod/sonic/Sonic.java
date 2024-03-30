@@ -3,10 +3,12 @@ package sonicthehedgemod.sonic;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -54,6 +56,8 @@ public class Sonic extends CustomPlayer {
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
+    public static final String SKELETON_ATLAS = characterPath("animation/skeleton.atlas"); // spine animation atlas
+    public static final String SKELETON_JSON = characterPath("animation/skeleton.json"); // spine animation
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -68,24 +72,21 @@ public class Sonic extends CustomPlayer {
 
     public Sonic() {
         super(
-                NAMES[0],
-                Enums.SONIC_THE_HEDGEHOG,
-                new CustomEnergyOrb(null, null, null), //Energy Orb
-                new AbstractAnimation() {
-                    @Override
-                    public Type type() {
-                        return Type.NONE;
-                    }
-                }
-        ); //Animation
+            NAMES[0],
+            Enums.SONIC_THE_HEDGEHOG,
+            new CustomEnergyOrb(null, null, null),
+            new SpineAnimation(SKELETON_ATLAS, SKELETON_JSON, 1.0f)
+        );
 
-        initializeClass(characterPath("sprites/idle.gif"),
+        initializeClass(null,
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,
                 getLoadout(),
-                20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
+                20.0F, 0F, 128.0F, 128.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
+
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "animtion0", true);
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
         dialogX = (drawX + 0.0F * Settings.scale);
