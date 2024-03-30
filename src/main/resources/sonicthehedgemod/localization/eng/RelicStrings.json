@@ -1,0 +1,9 @@
+{
+  "${modID}:TrickMastery": {
+    "NAME": "Trick Mastery",
+    "FLAVOR": "Might as well make it flashy.",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, draw another one."
+    ]
+  }
+}

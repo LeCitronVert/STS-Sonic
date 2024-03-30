@@ -1,0 +1,19 @@
+  {
+  "${modID}:Cyloop": {
+    "NAME": "Cyloop",
+    "DESCRIPTION": "Innate. Retain. NL ${modID}:Cyloops the targeted enemy."
+  },
+  "${modID}:PhantomRush": {
+    "NAME": "Phantom Rush",
+    "DESCRIPTION": "Gain 1 Strength upon playing a card."
+  },
+  "${modID}:EmergencyRing": {
+    "NAME": "Emergency Ring",
+    "DESCRIPTION": "Gain !M! ${modID}:Ring.",
+    "UPGRADE_DESCRIPTION": "Gain !M! ${modID}:Ring and !M! ${modID}:Ring_Recovery."
+  },
+  "${modID}:SonicStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Cyloop_Finisher : Deal !M! additional damage."
+  }
+}

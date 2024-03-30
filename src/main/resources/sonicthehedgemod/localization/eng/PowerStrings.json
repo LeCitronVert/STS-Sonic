@@ -1,0 +1,30 @@
+{
+  "${modID}:Cylooped": {
+    "NAME": "Cylooped",
+    "DESCRIPTIONS": [
+      "Cards with the #yCyloop #yFinisher tag will trigger additional effects. Applying this effect again will consume both and the affected creature will lose #b",
+      "% of their remaining HP or #b",
+      "% of their max HP, depending on whichever is the highest."
+    ]
+  },
+  "${modID}:PhantomRush": {
+    "NAME": "Phantom Rush",
+    "DESCRIPTIONS": [
+      "Gain #b1 #yStrength upon playing a card."
+    ]
+  },
+  "${modID}:Rings": {
+    "NAME": "Rings",
+    "DESCRIPTIONS": [
+      "Blocks next incoming damage at the price of all your Rings. At the start of your next turn, you have a chance to recover a random amount of your rings depending on the amount you previously had. You are guaranteed to recover rings if you had at least #b",
+      "."
+    ]
+  },
+  "${modID}:RingsRecovery": {
+    "NAME": "Rings Recovery",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, recover #b",
+      " rings."
+    ]
+  }
+}

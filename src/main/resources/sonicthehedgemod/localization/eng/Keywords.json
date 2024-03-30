@@ -1,0 +1,38 @@
+[
+  {
+    "PROPER_NAME": "Cyloop",
+    "NAMES": [
+      "cyloops",
+      "cylooped"
+    ],
+    "DESCRIPTION": "Applies the #yCyloop status on the enemy. It can be consumed to activate #yCyloop #yFinisher effects, or applied again to deal HP-based damage."
+  },
+  {
+    "PROPER_NAME": "Cyloop Finisher",
+    "NAMES": [
+      "cyloop finisher",
+      "cyloop finishers",
+      "cyloop_finisher",
+      "cyloop_finishers"
+    ],
+    "DESCRIPTION": "If the target is affected by #yCyloop, consumes it to trigger an additional effect."
+  },
+  {
+    "PROPER_NAME": "Rings",
+    "NAMES": [
+      "ring",
+      "rings"
+    ],
+    "DESCRIPTION": "Blocks next incoming damage at the price of all your Rings. May recover some of the lost Rings next turn, depending on high the amount lost was."
+  },
+  {
+    "PROPER_NAME": "Rings Recovery",
+    "NAMES": [
+      "ring recovery",
+      "rings recovery",
+      "ring_recovery",
+      "rings_recovery"
+    ],
+    "DESCRIPTION": "Gain Rings equal to the amount of this buff at the start of your next turn."
+  }
+]
