@@ -5,5 +5,50 @@
     "DESCRIPTIONS": [
       "Whenever you play a card, draw another one."
     ]
+  },
+  "${modID}:InvincibleStart": {
+    "NAME": "Invincible Start",
+    "FLAVOR": "You've been looking in the trees, huh.",
+    "DESCRIPTIONS": [
+      "Negates #bALL damage received on the first turn."
+    ]
+  },
+  "${modID}:LastChance": {
+    "NAME": "Last Chance",
+    "FLAVOR": "Unfortunate that this game has no lives system.",
+    "DESCRIPTIONS": [
+      "If HP < #b1, reduces HP to #b1 instead of receiving a lethal hit."
+    ]
+  },
+  "${modID}:SafetyNet": {
+    "NAME": "Safety Net",
+    "FLAVOR": "It's always morally correct to use damage boosting.",
+    "DESCRIPTIONS": [
+      "When receiving damage, gain #y${modID}:Rings equivalent to the damage received at the start of your next turn."
+    ]
+  },
+  "${modID}:RingEnergy": {
+    "NAME": "Ring Energy",
+    "FLAVOR": "This is an acceptable trade-off for a Boost Gauge, right ?",
+    "DESCRIPTIONS": [
+      "When you end your turn, each of your #y${modID}:Rings has a #b",
+      "% chance of being converted into #b",
+      " #yStrength."
+    ]
+  },
+  "${modID}:TenSecondRing": {
+    "NAME": "10-Second Rings",
+    "FLAVOR": "You kept them for more than ten seconds ! That's why you deserve a reward !",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you still have #y${modID}:Rings, gain #b",
+      " #yStrength."
+    ]
+  },
+  "${modID}:SerialHoming": {
+    "NAME": "Serial Homing",
+    "FLAVOR": "No, I don't have it in me to write a witty description about Boost games here.",
+    "DESCRIPTIONS": [
+      "When you successfully trigger a #y${modID}:Cyloop_Finisher, draw a #yQuick #yHoming #yAttack in your hand."
+    ]
   }
 }

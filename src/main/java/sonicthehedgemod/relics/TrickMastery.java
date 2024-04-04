@@ -24,6 +24,7 @@ public class TrickMastery extends BaseRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
+        this.flash();
         addToTop(new DrawCardAction(1));
     }
 }

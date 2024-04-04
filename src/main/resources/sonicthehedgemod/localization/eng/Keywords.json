@@ -23,7 +23,7 @@
       "ring",
       "rings"
     ],
-    "DESCRIPTION": "Blocks next incoming damage at the price of all your Rings. May recover some of the lost Rings next turn, depending on high the amount lost was."
+    "DESCRIPTION": "Blocks next incoming damage at the price of all your Rings. May recover some of the lost Rings next turn, depending on how high the amount lost was."
   },
   {
     "PROPER_NAME": "Rings Recovery",

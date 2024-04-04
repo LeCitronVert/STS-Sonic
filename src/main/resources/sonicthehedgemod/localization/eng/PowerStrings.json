@@ -16,7 +16,7 @@
   "${modID}:Rings": {
     "NAME": "Rings",
     "DESCRIPTIONS": [
-      "Blocks next incoming damage at the price of all your Rings. At the start of your next turn, you have a chance to recover a random amount of your rings depending on the amount you previously had. You are guaranteed to recover rings if you had at least #b",
+      "Blocks next incoming damage at the price of all your #yRings. At the start of your next turn, you have a chance to recover a random amount of your #yRings depending on the amount you previously had. You are guaranteed to recover #yRings if you had at least #b",
       "."
     ]
   },
@@ -25,6 +25,12 @@
     "DESCRIPTIONS": [
       "At the start of your next turn, recover #b",
       " rings."
+    ]
+  },
+  "${modID}:Invincible": {
+    "NAME": "Invincible",
+    "DESCRIPTIONS": [
+      "Reduce ALL damage received to #b0 this turn."
     ]
   }
 }

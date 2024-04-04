@@ -4,8 +4,11 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import sonicthehedgemod.SonicTheHedgemod;
+import sonicthehedgemod.relics.CyloopFinisherRelic;
 
 public class Cylooped extends BasePower {
     public static final String POWER_ID = SonicTheHedgemod.makeID("Cylooped");
@@ -22,6 +25,8 @@ public class Cylooped extends BasePower {
 
     public void stackPower(int stackAmount) {
         if (this.amount >= 1) {
+            this.flash();
+
             this.addToTop(new DamageAction(
                     this.owner,
                     new DamageInfo(

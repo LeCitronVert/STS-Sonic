@@ -17,6 +17,8 @@ public class RingsRecovery extends BasePower {
 
     @Override
     public void atStartOfTurn() {
+        this.flash();
+
         this.addToTop(new ApplyPowerAction(
             this.owner,
             this.owner,

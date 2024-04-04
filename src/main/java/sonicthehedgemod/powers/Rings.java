@@ -24,6 +24,11 @@ public class Rings extends BasePower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
+        if (damageAmount <= 0) {
+            return damageAmount;
+        }
+
+        this.flash();
         this.calculateRecoveredRings();
         this.addToTop(new RemoveSpecificPowerAction(
             this.owner,

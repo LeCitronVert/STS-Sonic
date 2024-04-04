@@ -15,5 +15,9 @@
   "${modID}:SonicStrike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage. NL ${modID}:Cyloop_Finisher : Deal !M! additional damage."
+  },
+  "${modID}:QuickHomingAttack": {
+    "NAME": "Quick Homing Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Ethereal."
   }
 }

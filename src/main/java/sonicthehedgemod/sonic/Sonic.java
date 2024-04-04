@@ -30,7 +30,7 @@ import sonicthehedgemod.SonicTheHedgemod;
 import sonicthehedgemod.cards.Cyloop;
 import sonicthehedgemod.cards.EmergencyRing;
 import sonicthehedgemod.cards.SonicStrike;
-import sonicthehedgemod.relics.TrickMastery;
+import sonicthehedgemod.relics.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,8 +89,8 @@ public class Sonic extends CustomPlayer {
         AnimationState.TrackEntry e = this.state.setAnimation(0, "animtion0", true);
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
-        dialogX = (drawX + 0.0F * Settings.scale);
-        dialogY = (drawY + 220.0F * Settings.scale);
+        dialogX = (drawX + 20.0F * Settings.scale);
+        dialogY = (drawY + 100.0F * Settings.scale);
     }
 
     @Override
@@ -102,8 +102,8 @@ public class Sonic extends CustomPlayer {
         retVal.add(SonicStrike.ID);
         retVal.add(SonicStrike.ID);
         retVal.add(SonicStrike.ID);
+        retVal.add(SonicStrike.ID);
         retVal.add(EmergencyRing.ID);
-        retVal.add(Cyloop.ID);
         retVal.add(Cyloop.ID);
 
 
@@ -123,14 +123,14 @@ public class Sonic extends CustomPlayer {
     public AbstractCard getStartCardForEvent() {
         //This card is used for the Gremlin card matching game.
         //It should be a non-strike non-defend starter card, but it doesn't have to be.
-        return new Strike_Red();
+        return new SonicStrike();
     }
 
     /*- Below this is methods that you should *probably* adjust, but don't have to. -*/
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 4; //Max hp reduction at ascension 14+
+        return 10; //Max hp reduction at ascension 14+
     }
 
     @Override
@@ -138,8 +138,12 @@ public class Sonic extends CustomPlayer {
         //These attack effects will be used when you attack the heart.
         return new AbstractGameAction.AttackEffect[] {
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL,
-                AbstractGameAction.AttackEffect.SLASH_HEAVY,
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
         };
     }
 

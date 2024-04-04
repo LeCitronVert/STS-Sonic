@@ -1,16 +1,16 @@
 package sonicthehedgemod.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sonicthehedgemod.enums.SonicTags;
 import sonicthehedgemod.powers.Cylooped;
 import sonicthehedgemod.sonic.Sonic;
 import sonicthehedgemod.util.CardStats;
 
-public class SonicStrike extends BaseCard {
+public class SonicStrike extends BaseCard implements CyloopFinisherCard {
     public static final String ID = makeID(SonicStrike.class.getSimpleName());
 
     private static final CardStats info = new CardStats(
@@ -33,6 +33,7 @@ public class SonicStrike extends BaseCard {
 
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        tags.add(SonicTags.CYLOOP_FINISHER);
     }
 
     @Override
@@ -46,6 +47,8 @@ public class SonicStrike extends BaseCard {
                 abstractPlayer,
                 Cylooped.POWER_ID
             ));
+
+            this.dispatchCyloopFinisher();
         }
 
         addToTop(new DamageAction(
